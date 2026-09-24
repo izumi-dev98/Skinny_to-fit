@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Fraunces', serif;
+  --font-editorial: 'Fraunces', serif;
+}
+
+@layer base {
+  body { margin: 0; font-family: 'DM Sans', sans-serif; }
+  button, input, select { font: inherit; }
+  button { cursor: pointer; }
+}
+
+@layer components {
+  .font-display { font-family: 'Fraunces', serif; }
+  .font-editorial { font-family: 'Fraunces', serif; }
+  .field-label { display: block; color: #617068; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  .field-label > span { font-weight: 400; color: #a0aaa3; text-transform: none; letter-spacing: 0; }
+  .field { margin-top: 0.5rem; width: 100%; border-radius: 0.75rem; border: 1px solid rgba(38,53,47,0.14); background: rgba(247,243,237,0.58); padding: 0.78rem 0.9rem; color: #26352f; outline: none; transition: border-color 150ms, box-shadow 150ms; }
+  .field:focus { border-color: #e56c48; box-shadow: 0 0 0 3px rgba(229,108,72,0.14); }
+  .choice { border-radius: 0.65rem; padding: 0.7rem; font-size: 0.875rem; font-weight: 700; color: #758077; transition: all 150ms; }
+  .choice-active { background: white; color: #26352f; box-shadow: 0 2px 8px rgba(38,53,47,0.1); }
+  .button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 0.75rem; padding: 0.8rem 1rem; font-size: 0.875rem; font-weight: 700; transition: transform 150ms, background 150ms; }
+  .button-primary { background: #e56c48; color: white; box-shadow: 0 8px 18px rgba(229,108,72,0.22); }
+  .button-primary:hover { background: #d95e3b; transform: translateY(-1px); }
+  .button-secondary { background: #f7f3ed; color: #617068; }
+  .button-secondary:hover { background: #ece5da; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.animate-rise { animation: rise 700ms ease-out both; }
