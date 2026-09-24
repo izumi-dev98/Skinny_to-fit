@@ -22,6 +22,10 @@
   .field:focus { border-color: #e56c48; box-shadow: 0 0 0 3px rgba(229,108,72,0.14); }
   .choice { border-radius: 0.65rem; padding: 0.7rem; font-size: 0.875rem; font-weight: 700; color: #758077; transition: all 150ms; }
   .choice-active { background: white; color: #26352f; box-shadow: 0 2px 8px rgba(38,53,47,0.1); }
+  .language-toggle { display: inline-flex; align-items: center; gap: 0.15rem; border-radius: 0.75rem; border: 1px solid rgba(38,53,47,0.14); background: rgba(255,255,255,0.55); padding: 0.25rem; color: #758077; font-size: 0.7rem; font-weight: 700; }
+  .language-toggle span { border-radius: 0.55rem; padding: 0.45rem 0.55rem; transition: all 150ms; }
+  .language-toggle .language-active { background: #26352f; color: #f7f3ed; }
+  [role="dialog"] > div:first-child { position: sticky; top: -2rem; z-index: 10; margin: -2rem -2rem 0; padding: 1.5rem 2rem 1rem; background: #fffaf4; }
   .button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 0.75rem; padding: 0.8rem 1rem; font-size: 0.875rem; font-weight: 700; transition: transform 150ms, background 150ms; }
   .button-primary { background: #e56c48; color: white; box-shadow: 0 8px 18px rgba(229,108,72,0.22); }
   .button-primary:hover { background: #d95e3b; transform: translateY(-1px); }
