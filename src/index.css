@@ -37,6 +37,7 @@
   .button-secondary { background: #f7f3ed; color: #617068; }
   .button-secondary:hover { background: #ece5da; }
   .responsive-shell { width: 100%; min-width: 0; }
+  .food-search { position: sticky; top: 4.75rem; z-index: 9; margin: 0 -0.25rem; padding: 0.25rem 0.25rem 0.75rem; background: #fffaf4; box-shadow: 0 8px 12px -12px rgba(38,53,47,0.35); }
 }
 
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
@@ -49,5 +50,6 @@ main > .pointer-events-none.absolute:nth-child(2) { right: 0; }
 @media (max-width: 639px) {
   main > .pointer-events-none.absolute { display: none; }
   [role="dialog"] > div:first-child { top: -1.5rem; margin: -1.5rem -1.5rem 0; padding: 1rem 1.5rem 0.75rem; }
+  .food-search { top: 3.75rem; }
   .grid.grid-cols-3 { grid-template-columns: minmax(0, 1fr) !important; }
 }
