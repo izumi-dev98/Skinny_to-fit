@@ -8,7 +8,9 @@
 }
 
 @layer base {
+  *, *::before, *::after { box-sizing: border-box; min-width: 0; }
   html, body, #root { max-width: 100%; overflow-x: hidden; }
+  html, body, #root { width: 100%; }
   body { margin: 0; min-width: 0; font-family: 'DM Sans', sans-serif; }
   button, input, select { font: inherit; }
   button { cursor: pointer; }
@@ -39,3 +41,13 @@
 
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 .animate-rise { animation: rise 700ms ease-out both; }
+
+[role="dialog"] { width: min(100%, calc(100vw - 2rem)); min-width: 0; }
+main > .pointer-events-none.absolute:first-child { left: 0; }
+main > .pointer-events-none.absolute:nth-child(2) { right: 0; }
+
+@media (max-width: 639px) {
+  main > .pointer-events-none.absolute { display: none; }
+  [role="dialog"] > div:first-child { top: -1.5rem; margin: -1.5rem -1.5rem 0; padding: 1rem 1.5rem 0.75rem; }
+  .grid.grid-cols-3 { grid-template-columns: minmax(0, 1fr) !important; }
+}

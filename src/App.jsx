@@ -170,10 +170,10 @@ function App() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f7f3ed] text-[#26352f]">
+    <main className="min-h-screen w-full max-w-[100vw] overflow-hidden bg-[#f7f3ed] text-[#26352f]">
       <div className="pointer-events-none absolute left-[-8rem] top-[-8rem] h-72 w-72 rounded-full bg-[#f5d7c8] opacity-70 blur-3xl" />
       <div className="pointer-events-none absolute right-[-6rem] top-32 h-96 w-96 rounded-full bg-[#dce7d5] opacity-70 blur-3xl" />
-      <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-6 sm:px-8 lg:px-12">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-6 sm:px-8 lg:px-12">
         <header className="sticky top-0 z-40 -mx-5 flex items-center justify-between border-b border-[#26352f]/10 bg-[#f7f3ed]/95 px-5 py-4 backdrop-blur sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#26352f] text-[#f7f3ed] shadow-lg shadow-[#26352f]/10"><Sparkles size={18} /></div>
